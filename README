@@ -1,0 +1,56 @@
+USER MANUAL
+
+This is a webpage display a different image of our universe with a brief explanation written by a astronomer. 
+
+How to use webpage:
+1. Today's image is automatically displayed when user accesses page.
+
+2. Subcribe form:
+    -Send us email to receive notifications of new images and exciting discoveries in astronomy every day.
+    -Email will be stored in user collection in MongoDB.
+    -If an email already existed in collection, a message "This email was used. Seem like you already subcribed to our website" will be displayed, that email will not be stored again.
+    
+3. Search forms:
+    Users can search for images in two ways:
+    
+    1.Form: Search Picture of Date:
+        -Submitting a date (YYYY-MM-DD), then a button showing image's title + image's date will appear in the image list.
+        -Details including title, copyright of image, and an explanation are automatically displayed.
+        -If user sends empty date, today's image will be displayed.
+        
+    2. Form: Search Images Between Dates:
+        -Submitting a start date (YYYY-MM-DD) and an end date (YYYY-MM-DD), then a list of button will be displayed.
+        -Details of first image of the list will be automatically displayed.
+        -Users can change to any image of the list by clicking on the button.
+        
+    Note: DATE must be between 1996-06-16 and today.
+    
+4. Image List:
+    This is where search results are displayed.
+
+5. Details pannel:
+    
+    1. Image Info:
+        A Title,
+        Image,
+        Copyright of image,
+        Explanation
+    
+    2. Comment section:
+        Each image has a comment collection.
+        Comment Form:
+            Nickname (can be empty): users provides a nickname to be displayed with their comments.
+            Email (required): to receive updated comment list, new info of the image.
+            Comment (required): users' opinion of the image.
+        
+
+
+        
+COPYRIGHT, REFERENCES and CITATIONS:
+    
+    1.Third-party API: https://apodapi.herokuapp.com/ (found on this website https://github.com/public-apis/public-apis#science--math (NASA APOD (unofficial API) in Science&Math))
+    
+    2.Images Copyright, explantion text: these fields are included in the results returned by the api queries.The copyright of each image is retrieved from the JSON object and showed below the image on webpage.
+
+
+        
