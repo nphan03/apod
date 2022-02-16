@@ -26,7 +26,7 @@ let handleAPIrequest = (url, req ,res, next) => {
     }  
     
 };
-//https://api.nasa.gov/planetary/apod?api_key=FxbE31tCszpFRsQNMNlFjHWWfrSR3CpLhb9WWY5v
+
 exports.gettodayImg = (req, res, next)=> handleAPIrequest(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_KEY}`, req ,res, next);
 exports.getfromtoImg = (req, res, next)=> handleAPIrequest(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_KEY}&start_date=${req.params.fromDate}&end_date=${req.params.toDate}`,req , res, next);
 exports.getspecificdateImg = (req, res, next)=> handleAPIrequest(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NASA_KEY}&date=${req.params.date}`,req , res, next);
